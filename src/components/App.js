@@ -47,7 +47,10 @@ class App extends Component {
               return (
                 // Conditional statement in the className of below div to give callName="bg-pink"
                 // if the percent >= 90 else className = ""
-                <div key={index} className="bg-pink">
+                <div
+                  key={index}
+                  className={item.percent >= 90 ? "bg-pink" : ""}
+                >
                   <div className="name">{item.percent.toFixed(2)}</div>
                   <div className="percent">{item.name}</div>
                 </div>
